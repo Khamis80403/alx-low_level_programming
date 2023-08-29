@@ -6,7 +6,7 @@
  */
 void free_listint2(listint_t **head)
 {
-    listint_t *current_node; // Renamed the variable for clarity
+    listint_t *current_node;
 
     if (head == NULL)
         return;
@@ -16,7 +16,7 @@ void free_listint2(listint_t **head)
         current_node = (*head)->next;
         free(*head);
 
-        // Added a print statement for visualization
+
         printf("Freed a node's memory\n");
 
         *head = current_node;
